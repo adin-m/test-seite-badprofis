@@ -1,0 +1,369 @@
+<h1>Change Log: <code>bootstrap-star-rating</code></h1>
+<h2>Version 4.1.2</h2>
+<p><strong>Date:</strong> 20-Sep-2021</p>
+<ul>
+<li>Simplify NPM module handling.</li>
+</ul>
+<h2>Version 4.1.1</h2>
+<p><strong>Date:</strong> 11-Sep-2021</p>
+<ul>
+<li>(enh #215): Correct NPM module handling.</li>
+</ul>
+<h2>Version 4.1.0</h2>
+<p><strong>Date:</strong> 25-Jul-2021</p>
+<ul>
+<li>(bug #213): Correct <code>mousenter</code> event to <code>mouseenter</code>.</li>
+<li>(enh #212): Enhance caption badge styles.</li>
+<li>(enh #211): Correct keyboard arrow keys behavior for RTL oriented inputs.</li>
+<li>(enh #210): Revamp themes - set default theme to Krajee SVG.</li>
+</ul>
+<h2>Version 4.0.9</h2>
+<p><strong>Date:</strong> 21-May-2021</p>
+<ul>
+<li>Correct <code>minThreshold</code> default value.</li>
+</ul>
+<h2>Version 4.0.8</h2>
+<p><strong>Date:</strong> 21-May-2021</p>
+<ul>
+<li>(enh #209): Enhancements to support BS 5.x (and 4.x/3.x).</li>
+</ul>
+<h2>Version 4.0.7</h2>
+<p><strong>Date:</strong> 20-May-2021</p>
+<ul>
+<li>(enh #208): Corrected positioning of the base input on which the rating is triggered.</li>
+<li>(enh #205): Add Dutch Translations.</li>
+<li>(enh #200): Activate Open Collective.</li>
+<li>(enh #199): Add Greek Translations.</li>
+<li>(enh #145): Minimum value threshold validation.
+<ul>
+<li>New property <code>minThreshold</code> which allows a star rated with minimum value always. The initial value
+of the rating is set to <code>minThreshold</code> if it has a value undefined or a value less than <code>minThreshold</code></li>
+<li>The <code>minThreshold</code> value must be a value between the <code>min</code> and <code>max</code> values</li>
+<li>If <code>minThreshold</code> is set to less than <code>min</code> the plugin will default <code>minThreshold</code> to the <code>min</code> value</li>
+<li>If <code>minThreshold</code> is set to greater than <code>max</code> the plugin will default <code>minThreshold</code> to the <code>max</code> value</li>
+</ul>
+</li>
+<li>(enh #129): Enhance accessibility &amp; make the  stars keyboard focusable.
+<ul>
+<li>New property <code>keyboardEnabled</code> - defaults to <code>true</code>
+<ul>
+<li>allow use of <code>tab</code> keyboard button to navigate to the rating</li>
+<li>allow use of arrow <code>right</code> and arrow <code>left</code> keyboard buttons to change the rating value</li>
+</ul>
+</li>
+<li>New property <code>mouseEnabled</code> - defaults to <code>true</code>
+<ul>
+<li>when set to false - the mouse cannot be used to change the ratings</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>(enh #111): Add titles to individual star elements.
+<ul>
+<li>New config property <code>starTitles</code> (can be set as object or function) - will set the title for each star</li>
+</ul>
+</li>
+<li>(enh #110): Hover events reworked. New events added <code>rating:mouseenter</code> and <code>rating:mouseleave</code></li>
+</ul>
+<pre><code>$('#ratingInput').on('rating:mouseenter rating:mouseleave', function(e, index, status, $star) {
+    console.log(index); // the index number of the star where the event was triggered
+    console.log(status); // whether the mouse event was triggered on `empty-star` or `filled-star`
+    console.log($star); // the current star jquery object where event was triggered 
+    console.log($star.attr('title')); // can get properties of the star object
+}); 
+</code></pre>
+<h2>Version 4.0.6</h2>
+<p><strong>Date:</strong> 25-May-2019</p>
+<ul>
+<li>(enh #195): Update Bootstrap dependency.</li>
+<li>(enh #194, enh #180): Allow StarCaptionClasses CSS classes to also be set by Percentage width.</li>
+<li>(enh #190): Update German Translations.</li>
+<li>Implement stale bot.</li>
+</ul>
+<h2>Version 4.0.5</h2>
+<p><strong>Date:</strong> 04-Oct-2018</p>
+<ul>
+<li>(enh #189): Add Bengali Translations.</li>
+<li>(enh #188): Allow <code>showCaption</code> when <code>displayOnly</code> is <code>true</code>.</li>
+</ul>
+<h2>Version 4.0.4</h2>
+<p><strong>Date:</strong> 15-Sep-2018</p>
+<ul>
+<li>Enhancements to support Bootstrap v4.x.</li>
+<li>Better styling of stars for the 5 rating sizes and maintain consistency across themes.</li>
+<li>(enh #187): Add Kazakh translations.</li>
+<li>(enh #184): Correct rating-input style to keep it hidden - yet trigger required validation.</li>
+<li>(enh #182): New Krajee Font Awesome 5.x <code>fas</code> theme.</li>
+<li>(bug #177, enh #179): New property <code>showCaptionAsTitle</code>
+<ul>
+<li>Useful for caption to be displayed as title for readonly ratings.</li>
+</ul>
+</li>
+</ul>
+<h2>Version 4.0.3</h2>
+<p><strong>Date:</strong> 03-Nov-2017</p>
+<ul>
+<li>(bug #173): Correct <code>rating:change</code> event.</li>
+<li>(enh #171): Rename events to start with <code>rating:</code> instead of <code>rating</code>.</li>
+<li>(enh #170): Enhancements to support Bootstrap v4.x framework.</li>
+</ul>
+<h2>Version 4.0.2</h2>
+<p><strong>Date:</strong> 27-Aug-2017</p>
+<ul>
+<li>(enh #170): Enhancements to support Bootstrap v4.x framework.</li>
+<li>Chronological sorting of issues and enhancements in the CHANGE log.</li>
+<li>(enh #164): Add Turkish Translations.</li>
+<li>(enh #163): Add Korean Translations.</li>
+<li>(enh #162): Add Italian Translations.</li>
+<li>(enh #161): Add Farsi Translations.</li>
+<li>(enh #156): More correct form reset event listening.</li>
+<li>(enh #155): Styling enhancements and code optimizations.</li>
+<li>(enh #154): New property <code>zeroAsNull</code> to treat zero value rating as null.</li>
+<li>(enh #153): Add ability to configure <code>required</code> attribute for input.</li>
+<li>Add github issue and PR contribution templates.</li>
+<li>(enh #142): Enable scroll when rating is readonly or disabled.</li>
+<li>(enh #139): Do not refer to minified files in bower main metadata .</li>
+<li>(enh #132): Add Polish Translations.</li>
+<li>(enh #131): Add Arabic Translations.</li>
+<li>(enh #130): Better management of themes and locales.</li>
+<li>(enh #127): Add Chinese Translations.</li>
+<li>(enh #124): Add License Headers.</li>
+<li>(enh #123): Add Italian Translations.</li>
+<li>(enh #122): Add Spanish Translations.</li>
+<li>(enh #115): Add Romanian Translations.</li>
+<li>(enh #108): Add French Translations.</li>
+</ul>
+<h2>Version 4.0.1</h2>
+<p><strong>Date:</strong> 28-Feb-2016</p>
+<ul>
+<li>Update package.json to include <code>peerDependencies</code> instead of <code>dependencies</code>.</li>
+<li>(enh #103): Implement method chaining and revamp private methods
+<ul>
+<li>enhance public methods like <code>create</code>, <code>destroy</code>, <code>refresh</code>, <code>clear</code>, <code>reset</code> to return the rating element jQuery object</li>
+</ul>
+</li>
+<li>(bug #102): Revamp generation of rating via <code>refresh</code> method.</li>
+<li>(bug #101): Correct caption setting when <code>showCaption</code> is <code>false</code>.</li>
+<li>(bug #100): Correct caption and clear rendering methods.</li>
+<li>(bug #99): Correct documentation for refresh method.</li>
+</ul>
+<h2>Version 4.0.0</h2>
+<p><strong>Date:</strong> 16-Feb-2016</p>
+<ul>
+<li>
+<p>(enh #97): Add <code>animate</code> property to enable / disable animation of star highlight on hover / change.</p>
+</li>
+<li>
+<p>(enh #96): Add support for <code>bootstrap-sass</code> official repo via <code>sass</code> branch.</p>
+</li>
+<li>
+<p>(enh #95): Add display only capability.</p>
+</li>
+<li>
+<p>(enh #94): Add Theming Functionality.</p>
+<ul>
+<li>New property <code>theme</code> will assign a CSS class with the <code>rating-&lt;theme-name&gt;</code> to the rating container.</li>
+<li>Themes included
+<ul>
+<li>The default (blank) theme (for displaying bootstrap glyphicons)</li>
+<li><code>krajee-svg</code> (for displaying svg icons)</li>
+<li><code>krajee-uni</code> (for displaying unicode symbols as stars)</li>
+<li><code>krajee-fa</code> (for displaying font awesome icons)</li>
+</ul>
+</li>
+<li>Add ability to override and add one's own themes</li>
+</ul>
+<p><strong>Various new features and BC breaking enhancements</strong></p>
+<ul>
+<li><strong>REMOVED</strong>: <code>symbol</code>, <code>glyphicon</code>, <code>ratingClass</code> properties will be removed.</li>
+<li>The requirement for the above will be replaced with the <code>theme</code> property (and can also be implemented using the <code>containerClass</code> property).</li>
+<li>Stars now have a better padding and spacing that can be configured via CSS and themes</li>
+<li>New property <code>filledStar</code> - will allow one to set the markup for <code>filledStar</code> - will default to
+<ul>
+<li><code>&lt;i class=&quot;glyphicon glyphicon-star&quot;&gt;&lt;/i&gt;</code></li>
+</ul>
+</li>
+<li>New property <code>emptyStar</code> - will allow one to set the markup for <code>emptyStar</code> - will default to
+<ul>
+<li><code>&lt;i class=&quot;glyphicon glyphicon-star-empty&quot;&gt;&lt;/i&gt;</code></li>
+</ul>
+</li>
+<li>Exclusive support for SVG (and a prebuilt <code>krajee-svg</code> theme that contains two different ready to use SVG icons).</li>
+</ul>
+</li>
+<li>
+<p>(enh #91): Add SVG Icon Support</p>
+</li>
+</ul>
+<h2>Version 3.5.8</h2>
+<p><strong>Date:</strong> 16-Feb-2016</p>
+<ul>
+<li>(bug #90): Rename reserved word used as variable.</li>
+<li>(enh #89): Add Portugese Brazilian Translations.</li>
+<li>(enh #88): Add German Translations.</li>
+</ul>
+<h2>Version 3.5.7</h2>
+<p><strong>Date:</strong> 22-Jan-2016</p>
+<ul>
+<li>(enh #86): Refactor code for listening events and deep extend options correctly.</li>
+<li>(enh #84): Add Ukranian Translations.</li>
+</ul>
+<h2>Version 3.5.6</h2>
+<p><strong>Date:</strong> 29-Dec-2015</p>
+<ul>
+<li>(enh #82): Added &quot;main&quot; key into NPM package.json.</li>
+<li>(enh #81): Simplify README docs.</li>
+<li>(bug #77): Correct <code>touches</code> and <code>changedTouches</code> validation.</li>
+<li>(enh #76): Add Russian Translations.</li>
+</ul>
+<h2>Version 3.5.5</h2>
+<p><strong>Date:</strong> 22-Nov-2015</p>
+<ul>
+<li>(enh #75): Implement Locales and Translations.</li>
+<li>(enh #74): Universal Module Definition for use with CommonJS, AMD or browser globals.</li>
+<li>(enh #71): Fix <code>Error: Cannot read property 'pageX' of undefined</code> error on touch devices.</li>
+</ul>
+<h2>Version 3.5.4</h2>
+<p><strong>Date:</strong> 20-Sep-2015</p>
+<ul>
+<li>Update bootstrap bower version to support only 3.x variants.</li>
+<li>(enh #63): Add <code>package.json</code> for npm install.</li>
+<li>(enh #59): Remove <code>String.prototype.replaceAll</code> and implement regex replace.</li>
+<li>(enh #47): Styling enhancements for printed output (better star colors and hide clear button).</li>
+</ul>
+<h2>Version 3.5.3</h2>
+<p><strong>Date:</strong> 18-Jun-2015</p>
+<ul>
+<li>Fixes for composer.json dependencies.</li>
+<li>(enh #58): Remove redundant tooltip title on hover of caption element.</li>
+</ul>
+<h2>Version 3.5.2</h2>
+<p><strong>Date:</strong> 10-May-2015</p>
+<ul>
+<li>(enh #46): More correct init of <code>clear</code> and <code>caption</code> elements.</li>
+<li>(enh #45): Validate on <code>touchstart</code> for devices that do not support <code>click</code> event.</li>
+</ul>
+<h2>Version 3.5.1</h2>
+<p><strong>Date:</strong> 13-Feb-2015</p>
+<ul>
+<li>Set copyright year to current.</li>
+<li>(enh #44): Ability to integrate with other font icon CSS frameworks like Font Awesome.
+<ul>
+<li>New property <code>ratingClass</code> added to allow configuring other icon framework css classes.</li>
+</ul>
+</li>
+</ul>
+<h2>Version 3.5.0</h2>
+<p><strong>Date:</strong> 31-Jan-2015</p>
+<ul>
+<li>(enh #42): Code cleanup and restructure for JS lint changes (using JSHint Code cleanup library).</li>
+<li>(enh #39): Prevent invalid star rating for numStars &gt; 5 with default value &amp; hoverChange enabled.</li>
+</ul>
+<h2>Version 3.4.0</h2>
+<p><strong>Date:</strong> 16-Dec-2014</p>
+<ul>
+<li>(enh #36): Added <code>create</code> method to create the rating plugin (typically after a destroy).</li>
+<li>(enh #35): Added <code>destroy</code> method to destroy the rating plugin.</li>
+</ul>
+<h2>Version 3.3.0</h2>
+<p><strong>Date:</strong> 17-Nov-2014</p>
+<ul>
+<li>(enh #33): Enhance touch methods for compatibility across more wider mobile device browsers.</li>
+<li>(bug #32): Prevent invalid star ratings if cursor is close to left/right edge of star array.</li>
+</ul>
+<h2>Version 3.2.0</h2>
+<p><strong>Date:</strong> 08-Nov-2014</p>
+<ul>
+<li>Updated CHANGE log to reflect user friendly date time formats.</li>
+<li>Set release to stable in composer.json.</li>
+</ul>
+<h2>Version 3.1.0</h2>
+<p><strong>Date:</strong> 27-Oct-2014</p>
+<ul>
+<li>enh #28: Add rating.refresh event.</li>
+<li>enh #27: Reset events on the rating element before every refresh.</li>
+<li>enh #26: Add touch device support to enable touch and slide across stars.</li>
+</ul>
+<h2>Version 3.0.0</h2>
+<p><strong>Date:</strong> 13-Oct-2014</p>
+<ul>
+<li>enh #24: Set <code>clearValue</code> to default to <code>min</code> if not set.</li>
+<li>enh #22: More correct minimum value and clear value validation through new <code>getWidthFromValue</code> method.</li>
+<li>enh #21: Following new events are added:
+<ul>
+<li><code>rating.hover</code></li>
+<li><code>rating.hoverleave</code></li>
+</ul>
+</li>
+<li>enh #20, #21: Included hover validation routine and rating state change on hover. Following new configurable properties added:
+<ul>
+<li><code>hoverEnabled</code>: <em>boolean</em> whether hover functionality is enabled. This will dynamically change the stars and caption on mouse hover. Defaults to <code>true</code>. This functionality will only work on desktop devices and if the input is not <code>disabled</code> or <code>readonly</code>.</li>
+<li><code>hoverChangeCaption</code>: <em>boolean</em> control whether the caption should dynamically change on mouse hover. Defaults to <code>true</code>. Will be applicable only if <code>hoverEnabled</code> is <code>true</code>.</li>
+<li><code>hoverChangeStars</code>: <em>boolean</em> control whether the stars should dynamically change on mouse hover. Defaults to <code>true</code>. Will be applicable only if <code>hoverEnabled</code> is <code>true</code>.</li>
+</ul>
+</li>
+</ul>
+<h2>Version 2.6.0</h2>
+<p><strong>Date:</strong> 23-Aug-2014</p>
+<ul>
+<li>enh #17: Dynamic configuration for <code>starCaptions</code> and <code>starCaptionClasses</code> using a function.</li>
+</ul>
+<h2>Version 2.5.0</h2>
+<p><strong>Date:</strong> 27-May-2014</p>
+<ul>
+<li>Caption and Clear elements parameters treated as identifiers rather than JQuery object elements.</li>
+<li>Removed cloning of inputs to allow better refreshing of input across ajax and other scenarios.</li>
+<li>Plugin support is now extended to all Touch based and mobile devices like iOS, Android.</li>
+<li>Plugin support is now extended to all browsers including pre IE10</li>
+<li>Uses special JQuery routines to trigger star rating changes.</li>
+<li>Change to entire plugin code to eliminate dependency of HTML5 input. Plugin size reduced to 8KB minified.</li>
+</ul>
+<h2>Version 2.1.0</h2>
+<p><strong>Date:</strong> 08-May-2014</p>
+<ul>
+<li>Bug #8,#9,#10: Correct cloning and con## Version of field to a range slider input.</li>
+</ul>
+<h2>Version 2.0.0</h2>
+<p><strong>Date:</strong> 25-Apr-2014</p>
+<ul>
+<li>Automatically degrades to a normal SELECT dropdown input for browsers that do not support
+HTML 5 range input.</li>
+<li>Uses HTML 5 range input to change ratings. Polyfills for range input in case JQuery/Javascript is disabled.</li>
+<li>Any star symbol (unicode or icon font) can be embedded instead of Glyphicon.</li>
+<li>Bootstrap style is made optional and configurable. Can override CSS to use any style.</li>
+<li>Right to left (RTL) support enhancement. Optimally uses the <code>dir</code> attribute of the range input.</li>
+<li>Render and display fractional star ratings. Configure number of stars, min, max, step, and theoretically
+support any fractional rating.</li>
+<li>Revamp of entire plugin code. Cleverly leverages CSS3 styles, animations, and HTML5 input features
+to render the plugin.</li>
+</ul>
+<h2>Version 1.2.0</h2>
+<p><strong>Date:</strong> 04-Apr-2014</p>
+<ul>
+<li>Clear button class customization added.</li>
+<li>Widget is customizable for using any CSS markup to override Bootstrap styles.</li>
+</ul>
+<h2>Version 1.1.0</h2>
+<p><strong>Date:</strong> 10-Mar-2014</p>
+<p>Revamped the methods for usage across wider scenarios:</p>
+<ul>
+<li>Revamped the <code>refresh</code> method to enable refreshing all plugin options at runtime via parameters.</li>
+<li>Included <code>update</code> method to set a value of a rating via javascript.</li>
+</ul>
+<h2>Version 1.0.0</h2>
+<p><strong>Date:</strong> 01-Oct-2013</p>
+<p>Initial release. The following features are included in this release:</p>
+<ul>
+<li>Convert any HTML input to a star rating control. Recommended input is of <code>type = number</code>, which will help fallback to a number input for browsers not supporting JQuery or Javascript.</li>
+<li>The plugin automatically converts an input with <code>type = number</code> to a star rating control if you set its <code>class = rating</code>. All options to the input can be passed as HTML5 <code>data</code> attributes.</li>
+<li>Involves pure CSS3 styling of the stars. Say goodbye to image sprites or playing with image backgrounds. Offers clean scalable vector icons for consistent display across devices.</li>
+<li>Specifically uses Bootstrap 3.x styles &amp; glyphs. Can be combined to work better for Bootstrap styled projects (or input group addons).</li>
+<li>Ability to clear values and options for the stars. Control where the clear button element can be shown.</li>
+<li>Reset star rating to the initial value when the form is reset.</li>
+<li>Ability to control and display caption of the selected stars. Each rated star can have its own caption. Control where the caption element can be shown.</li>
+<li>Ability to size the rating control including the stars, caption, and clear button. Five prebuilt size templates are available <code>xl</code>, <code>lg</code>, <code>md</code>, <code>sm</code>, and <code>xs</code>.</li>
+<li>Support for RIGHT TO LEFT (RTL) input. Automatically changes star styling for RTL.</li>
+<li>Triggers JQuery events for advanced development. Events currently available are <code>rating.change</code>, <code>rating.clear</code>, and  <code>rating.reset</code>.</li>
+<li>Disabled and readonly input star rating support.</li>
+<li>Size of the entire plugin is less than 9KB (about 6KB for the minified JS and 3KB for the minified CSS).</li>
+</ul>

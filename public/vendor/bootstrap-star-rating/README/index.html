@@ -1,0 +1,167 @@
+<h1 align="center">
+    <a href="https://plugins.krajee.com" title="Krajee Plugins" target="_blank">
+        <img src="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/krajee-logo-b.png" alt="Krajee Logo"/>
+    </a>
+    <br>
+    bootstrap-star-rating
+    <hr>
+    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DTP3NZQ6G2AYU"
+       title="Donate via Paypal" target="_blank"><img src="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/donate.png" height="60" alt="Donate"/></a>
+    &nbsp; &nbsp; &nbsp;
+    <a href="https://www.buymeacoffee.com/kartikv" title="Buy me a coffee" ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="60" alt="kartikv" /></a>
+</h1>
+<div align="center">
+<p><a href="https://opencollective.com/bootstrap-star-rating"><img src="https://opencollective.com/bootstrap-star-rating/all/badge.svg?label=financial+contributors" alt="Financial Contributors on Open Collective"></a>
+<a href="http://badge.fury.io/bo/bootstrap-star-rating"><img src="https://badge.fury.io/bo/bootstrap-star-rating.svg" alt="Bower version"></a>
+<a href="https://packagist.org/packages/kartik-v/bootstrap-star-rating"><img src="https://poser.pugx.org/kartik-v/bootstrap-star-rating/v/stable" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/kartik-v/bootstrap-star-rating"><img src="https://poser.pugx.org/kartik-v/bootstrap-star-rating/license" alt="License"></a>
+<a href="https://packagist.org/packages/kartik-v/bootstrap-star-rating"><img src="https://poser.pugx.org/kartik-v/bootstrap-star-rating/downloads" alt="Packagist Downloads"></a>
+<a href="https://packagist.org/packages/kartik-v/bootstrap-star-rating"><img src="https://poser.pugx.org/kartik-v/bootstrap-star-rating/d/monthly" alt="Monthly Downloads"></a></p>
+</div>
+<p>A simple yet powerful JQuery star rating plugin for Bootstrap which supports advanced features like fractional star fill and RTL input support.
+Developed with a focus on utlizing pure CSS-3 styling to render the control. The plugin uses Bootstrap markup and styling by default, but it
+can be overridden with any other CSS markup. View the <a href="http://plugins.krajee.com/star-rating">documentation</a> or a <a href="http://plugins.krajee.com/star-rating/demo">complete demo</a>
+at Krajee JQuery plugins.</p>
+<blockquote>
+<p>NOTE: Release v4.0 is a modified rewrite with various new enhancements and BC breaking features. It allows rendering richer markup for star symbols and offers theming support.</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput-samples@0.0.1/samples/star-rating-screenshot.png" alt="Star Rating Screenshot"></p>
+<h2>Features</h2>
+<ul>
+<li>Convert any HTML input to a star rating control.</li>
+<li>The plugin automatically converts an input to a star rating control if you set its <code>class = rating</code>.
+All options to the input can be passed as HTML5 <code>data</code> attributes.</li>
+<li>You can use the HTML 5 number input for polyfill and the plugin will automatically use the number attributes like <code>min</code>, <code>max</code>, and <code>step</code>.
+However, number inputs have a problem with decimal values on the Chrome Browser. Read the Browser Support section in the documentation.</li>
+<li>Involves pure CSS3 styling of the stars. Say goodbye to image sprites or playing with image backgrounds. Offers clean scalable vector
+icons for consistent display across devices. Optionally one can use the Unicode character set to override symbols.</li>
+<li>Use any of your favorite font icon frameworks to render your star symbols (for example you can easily use the icons from the FontAwesome library).</li>
+<li>Render and display fractional star ratings. Configure number of stars, min, max, step, and theoretically  support any fractional rating.</li>
+<li>Uses Bootstrap 5.x, 4.x, 3.x styles &amp; Bootstrap 3.x glyphicons by default. But this can be overridden with plugin parameters and your own CSS styles.</li>
+<li>Support for RIGHT TO LEFT (RTL) input. Automatically changes star styling for RTL.</li>
+<li>Ability to clear values and options for the stars. Control where the clear button element can be shown.</li>
+<li>Reset star rating to the initial value when the form is reset.</li>
+<li>Ability to control and display caption of the selected stars. Each rated star can have its own caption. Control where the
+caption element can be shown.</li>
+<li>Ability to size the rating control including the stars, caption, and clear button. Five prebuilt size templates are
+available <code>xl</code>, <code>lg</code>, <code>md</code>, <code>sm</code>, and <code>xs</code>.</li>
+<li>Triggers JQuery events for advanced development. Events currently available are <code>rating.change</code>, <code>rating.clear</code>, <code>rating.reset</code>, <code>rating.refresh</code>, <code>rating.hover</code>, and <code>rating.hoverleave</code>.</li>
+<li>Disabled and readonly input star rating support.</li>
+<li>Change stars and caption on mouse hover (new feature since v3.0.0).</li>
+<li>Change stars and caption on slide and drag for mobile/touch devices (new feature since v3.1.0).</li>
+<li>Support for translations and locales.</li>
+</ul>
+<h3>New features/changes since release v4.0</h3>
+<ul>
+<li><strong>BC Breaking Change</strong>: The <code>symbol</code>, <code>glyphicon</code>, <code>ratingClass</code> properties have been removed. The functionality is replaced with the <code>theme</code> property (and can also be complemented or implemented separately using the <code>containerClass</code> property).</li>
+<li>New property <code>theme</code> will assign a CSS class with the <code>rating-&lt;theme-name&gt;</code> to the rating container.
+<ul>
+<li>Themes included
+<ul>
+<li><code>krajee-svg</code> (for displaying svg icons) - default theme since v4.1.2</li>
+<li><code>krajee-uni</code> (for displaying Krajee unicode symbols as stars)</li>
+<li><code>krajee-fas</code> (for displaying font awesome 5.x icons)</li>
+<li><code>krajee-fa</code> (for displaying font awesome 4.x icons)</li>
+<li><code>krajee-gly</code> (for displaying bootstrap 3.x glyphicons)</li>
+</ul>
+</li>
+<li>Add ability to override and add one's own themes</li>
+</ul>
+</li>
+<li>Stars now have a better padding and spacing that can be configured via CSS and themes</li>
+<li>New property <code>filledStar</code> - will allow one to set the markup for <code>filledStar</code> - will default to
+<ul>
+<li><code>&lt;i class=&quot;glyphicon glyphicon-star&quot;&gt;&lt;/i&gt;</code></li>
+</ul>
+</li>
+<li>New property <code>emptyStar</code> - will allow one to set the markup for <code>emptyStar</code> - will default to
+<ul>
+<li><code>&lt;i class=&quot;glyphicon glyphicon-star-empty&quot;&gt;&lt;/i&gt;</code></li>
+</ul>
+</li>
+<li>Exclusive support for SVG (and a prebuilt <code>krajee-svg</code> theme that contains two different ready to use SVG icons).</li>
+<li>Ability to easily set the widget as a &quot;display only&quot; rating via <code>displayOnly</code> property.</li>
+<li>New property <code>animate</code> to control animation of highlighted stars on hover or click.</li>
+</ul>
+<blockquote>
+<p>NOTE: Refer <a href="https://github.com/kartik-v/bootstrap-star-rating/blob/master/CHANGE.md">change log</a> for details on plugin enhancements, fixes, and changes.</p>
+</blockquote>
+<h2>Documentation and Demo</h2>
+<p>View the <a href="http://plugins.krajee.com/star-rating">plugin documentation</a> and <a href="http://plugins.krajee.com/star-rating/demo">plugin demos</a> at Krajee JQuery plugins.</p>
+<h2>Pre-requisites</h2>
+<ol>
+<li><a href="http://getbootstrap.com/">Bootstrap 5.x, 4.x, 3.x</a></li>
+<li>Latest <a href="http://jquery.com/">JQuery</a></li>
+<li>Most browsers supporting CSS3 &amp; JQuery.</li>
+</ol>
+<h2>Installation</h2>
+<h3>Using Bower</h3>
+<p>You can use the <code>bower</code> package manager to install. Run:</p>
+<p>bower install bootstrap-star-rating</p>
+<h3>Using Composer</h3>
+<p>You can use the <code>composer</code> package manager to install. Either run:</p>
+<p>$ php composer.phar require kartik-v/bootstrap-star-rating &quot;@dev&quot;</p>
+<p>or add:</p>
+<p>&quot;kartik-v/bootstrap-star-rating&quot;: &quot;@dev&quot;</p>
+<p>to your composer.json file</p>
+<blockquote>
+<p>NOTE: You can use the <a href="https://github.com/kartik-v/bootstrap-star-rating/tree/sass">sass branch</a> for installation using <code>bootstrap-sass</code> dependency.
+The <a href="https://github.com/kartik-v/bootstrap-star-rating/tree/master">master branch</a> can be used for installation using plain <code>bootstrap</code> dependency.</p>
+</blockquote>
+<h3>Manual Install</h3>
+<p>You can also manually install the plugin easily to your project. Just download the source <a href="https://github.com/kartik-v/bootstrap-star-rating/zipball/master">ZIP</a> or <a href="https://github.com/kartik-v/bootstrap-star-rating/tarball/master">TAR ball</a> and extract the plugin assets (css and js folders) into your project.</p>
+<h2>Usage</h2>
+<p>Step 1: Load the following assets in your header.</p>
+<pre><code class="language-html">&lt;!-- default styles --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css&quot;&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+
+&lt;!-- with v4.1.0 Krajee SVG theme is used as default (and must be loaded as below) - include any of the other theme CSS files as mentioned below (and change the theme property of the plugin) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.css&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+
+&lt;!-- important mandatory libraries --&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;!-- with v4.1.0 Krajee SVG theme is used as default (and must be loaded as below) - include any of the other theme JS files as mentioned below (and change the theme property of the plugin) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- optionally if you need translation for your language then include locale file as mentioned below (replace LANG.js with your own locale file) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/locales/LANG.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>If you noticed, you need to load the <code>jquery.min.js</code> and <code>bootstrap.min.css</code> in addition to the <code>star-rating.min.css</code> and <code>star-rating.min.js</code> for
+the plugin to work with default settings.</p>
+<p>Step 2: Setup your input markup to automatically initialize the rating</p>
+<pre><code class="language-html">&lt;input id=&quot;input-id&quot; type=&quot;text&quot; class=&quot;rating&quot; data-size=&quot;lg&quot; &gt;
+</code></pre>
+<p>Step 3: Initialize the plugin on your page for other input types. For example,</p>
+<pre><code class="language-js">// initialize with defaults
+$(&quot;#input-id&quot;).rating();
+
+// with plugin options (do not attach the CSS class &quot;rating&quot; to your input if using this approach)
+$(&quot;#input-id&quot;).rating({'size':'lg'});
+</code></pre>
+<p>The <code>#input-id</code> is the identifier for the input on your page (that you used to initialize the rating), and this input is hidden automatically by the plugin (by adding the bootstrap CSS class <code>hide</code>).</p>
+<p>Alternatively, you can directly call the plugin options by setting data attributes to your input field.</p>
+<h2>Contributors</h2>
+<h3>Code Contributors</h3>
+<p>This project exists thanks to all the people who contribute. [<a href="CONTRIBUTING.md">Contribute</a>].
+<a href="https://github.com/kartik-v/bootstrap-star-rating/graphs/contributors"><img src="https://opencollective.com/bootstrap-star-rating/contributors.svg?width=890&button=false" /></a></p>
+<h3>Financial Contributors</h3>
+<p>Become a financial contributor and help us sustain our community. [<a href="https://opencollective.com/bootstrap-star-rating/contribute">Contribute</a>]</p>
+<h4>Individuals</h4>
+<p><a href="https://opencollective.com/bootstrap-star-rating"><img src="https://opencollective.com/bootstrap-star-rating/individuals.svg?width=890"></a></p>
+<h4>Organizations</h4>
+<p>Support this project with your organization. Your logo will show up here with a link to your website. [<a href="https://opencollective.com/bootstrap-star-rating/contribute">Contribute</a>]</p>
+<p><a href="https://opencollective.com/bootstrap-star-rating/organization/0/website"><img src="https://opencollective.com/bootstrap-star-rating/organization/0/avatar.svg"></a>
+<a href="https://opencollective.com/bootstrap-star-rating/organization/1/website"><img src="https://opencollective.com/bootstrap-star-rating/organization/1/avatar.svg"></a>
+<a href="https://opencollective.com/bootstrap-star-rating/organization/2/website"><img src="https://opencollective.com/bootstrap-star-rating/organization/2/avatar.svg"></a>
+<a href="https://opencollective.com/bootstrap-star-rating/organization/3/website"><img src="https://opencollective.com/bootstrap-star-rating/organization/3/avatar.svg"></a>
+<a href="https://opencollective.com/bootstrap-star-rating/organization/4/website"><img src="https://opencollective.com/bootstrap-star-rating/organization/4/avatar.svg"></a>
+<a href="https://opencollective.com/bootstrap-star-rating/organization/5/website"><img src="https://opencollective.com/bootstrap-star-rating/organization/5/avatar.svg"></a>
+<a href="https://opencollective.com/bootstrap-star-rating/organization/6/website"><img src="https://opencollective.com/bootstrap-star-rating/organization/6/avatar.svg"></a>
+<a href="https://opencollective.com/bootstrap-star-rating/organization/7/website"><img src="https://opencollective.com/bootstrap-star-rating/organization/7/avatar.svg"></a>
+<a href="https://opencollective.com/bootstrap-star-rating/organization/8/website"><img src="https://opencollective.com/bootstrap-star-rating/organization/8/avatar.svg"></a>
+<a href="https://opencollective.com/bootstrap-star-rating/organization/9/website"><img src="https://opencollective.com/bootstrap-star-rating/organization/9/avatar.svg"></a></p>
+<h2>License</h2>
+<p><strong>bootstrap-star-rating</strong> is released under the BSD-3-Clause License. See the bundled <code>LICENSE.md</code> for details.</p>
