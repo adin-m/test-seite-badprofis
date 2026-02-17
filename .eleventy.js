@@ -22,7 +22,7 @@ eleventyConfig.addFilter("postDate", (dateObj) => {
 return {
 	dir: {
 		input: "src",
-		output: "docs"
+		output: "public"
 	}
 };
 }
