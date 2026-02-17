@@ -1,0 +1,156 @@
+/* Cookie Notice Positioning */
+.cookie-notice {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    max-width: 90%;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 9999;
+    border-left: 5px solid #0088cc; /* Matches your primary blue */
+    font-family: "Poppins", sans-serif;
+}
+
+.cookie-content p {
+    margin-bottom: 15px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Button style to match your theme */
+.cookie-notice .btn-primary {
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cookie-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Make the Accept button take up flexible space */
+#accept-cookies {
+    flex: 1;
+}
+
+/* Style for the Decline button */
+#decline-cookies {
+    color: #999;
+    font-weight: 500;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+#decline-cookies:hover {
+    color: #e36159; /* Reddish tint on hover */
+}
+
+/* Container layout */
+.offer-cta-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* This centers it horizontally on desktop */
+    flex-wrap: wrap; 
+    gap: 25px;
+    margin-top: 25px;
+    width: 100%; /* Ensures it uses the full width of its parent */
+    text-align: center;}
+
+/* Group for Avatars + Stars */
+.rating-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Avatar Stack Effect */
+.avatar-stack {
+    display: flex;
+    align-items: center;
+    /* Move the whole stack slightly left to compensate for the first item's lack of margin */
+    padding-left: 10px; 
+}
+
+.avatar-item {
+    width: 35px;
+    height: 35px;
+    background-color: #e0e0e0; /* Grey Placeholder */
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-left: -12px; /* This creates the overlap */
+}
+
+.avatar-item:first-child {
+    margin-left: 0;
+}
+
+.avatar-link {
+    display: inline-block;
+    margin-left: -12px; /* This creates the stacking overlap */
+    transition: transform 0.2s ease-in-out;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.avatar-link:first-child {
+    margin-left: 0;
+}
+
+/* Hover effect: bring the hovered avatar to the front */
+.avatar-link:hover {
+    transform: translateY(-5px);
+    z-index: 10;
+    position: relative;
+}
+
+.avatar-img {
+    width: 32px !important;
+    height: 32px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background-color: #eeeeee; /* Fallback grey */
+    display: block;
+}
+
+/* Star Rating Styling */
+.star-rating {
+    color: #FFD700; /* Gold color */
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.rating-text {
+    color: #777;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Mobile Stacking Logic */
+@media (max-width: 767px) {
+    .offer-cta-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Centering for mobile */
+        gap: 15px;
+    }
+    
+    .offer-cta-container .btn {
+        width: auto; /* Keeps the button from being too wide unless you want 100% */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .rating-group {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}

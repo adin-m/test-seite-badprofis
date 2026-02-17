@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main # Ensure this matches your main branch name (main or master)
+
+media_folder: "src/assets/blog" # Where the CMS saves uploaded files
+public_folder: "/assets/blog"    # The URL used in the Markdown frontmatter
+
+collections:
+  - name: "blog" # Added space after hyphen
+    label: "Blog"
+    folder: "src/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Day", name: "day", widget: "number" }
+      - { label: "Month", name: "month", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Featured Image", name: "image", widget: "image" } # Changed 'init' to 'image'
+      - { label: "Image Caption", name: "imageAlt", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }

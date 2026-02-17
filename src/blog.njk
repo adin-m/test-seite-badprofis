@@ -1,0 +1,32 @@
+---
+title: Bad Blog | Tipps zur Bad-Sanierung
+layout: 'base.njk'
+---
+			
+
+				<div class="container py-4">
+
+					<div class="row">
+						<div class="col">
+							<div class="blog-posts">
+
+								<div class="row">
+
+									{% for post in collections.featured | reverse %}
+            
+										{% include 'article-snippet.njk' %}
+
+									{%- endfor %}
+
+
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			
+				

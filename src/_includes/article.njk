@@ -1,0 +1,44 @@
+---
+layout: 'base.njk'
+---
+<div class="container py-4">
+    <div class="row">
+        <div class="col">
+            <div class="blog-posts single-post">
+<article class="post post-large blog-single-post border-0 m-0 p-0">
+    
+    <div class="post-image ms-0">
+        <img src="{{ image }}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="{{ imageAlt }}" />
+    </div>
+
+    <div class="post-content ms-0">
+        {# MOVE THE DATE HERE - Inside post-content, before the title #}
+        <div class="post-date ms-0">
+            <span class="day">{{ day }}</span>
+            <span class="month">{{ month }}</span>
+        </div>
+
+        <h2 class="font-weight-semi-bold mt-3 text-color-primary">
+    {{ title }}
+</h2>
+        <div class="post-meta">
+            <span><i class="far fa-user"></i> Von {{ author }}</span>
+            {% if tags %}
+            <span class="ms-2"><i class="far fa-folder"></i> {{ tags | join(', ') }}</span>
+            {% endif %}
+        </div>
+
+        <div class="article-body mt-4">
+            {{ content | safe }}
+        </div>
+    </div>
+</article>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+

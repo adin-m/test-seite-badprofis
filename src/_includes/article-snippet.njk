@@ -1,0 +1,34 @@
+<!-- The COLUMN is the only thing INSIDE the loop -->
+            <div class="col-md-4">
+                <article class="post post-medium border-0 pb-0 mb-5">
+                    
+                    <!-- Fixed: Use a real <img> tag inside the 16:9 container -->
+                    <div class="post-image" style="width: 100%; aspect-ratio: 16 / 9; overflow: hidden; margin-bottom: 0 !important; line-height: 0;">
+                        <a href="{{ post.url }}">
+                            <img src="{{ post.data.image }}" 
+                                 alt="{{ post.data.imageAlt }}" 
+                                 class="img-fluid img-thumbnail-no-borders rounded-0" 
+                                 style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        </a>
+                    </div>
+
+                    <div class="post-content">
+                        <h3 class="font-weight-semibold text-5 line-height-6 mt-3 mb-2">
+                            <a href="{{ post.url }}" class="text-transform-none">{{ post.data.title }}</a>
+                        </h3>
+                        
+                        <p class="snippet__meta">
+                            <span class="me-3">
+                                <i class="far fa-user me-1"></i>{{ post.data.author }}
+                            </span>
+                            <span>
+                                <i class="far fa-calendar-alt me-1"></i>{{ post.date | postDate }}
+                            </span>
+                        </p>
+                        
+                        <p class="snippet__body">{{ post.data.description }}</p>
+                        
+                        <a href="{{ post.url }}" class="btn btn-xs btn-light text-1 text-uppercase">Mehr erfahren</a>
+                    </div>
+                </article>
+            </div>
